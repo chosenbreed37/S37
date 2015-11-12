@@ -1,0 +1,10 @@
+﻿#r @"d:\Code\csharp\S37.IS\S37.IS.Client\bin\Debug\S37.IS.Client.dll"
+
+open S37.IS.Client.Workflow
+
+let publish message =
+    let pipeline = new MessagePipeline()
+    pipeline.Push message
+
+let result = publish "Hello, world1"
+
